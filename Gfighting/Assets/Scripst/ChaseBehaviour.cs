@@ -8,6 +8,9 @@ public class ChaseBehaviour : StateMachineBehaviour
     NavMeshAgent agent;
     Transform player;
     float attackRange = 2;
+    public DamageDealer damageDealer;
+    private float lastAttackTime;
+    public float attackCooldown = 1f;
     //   float chaseRange = 10;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -23,9 +26,7 @@ public class ChaseBehaviour : StateMachineBehaviour
     {
         agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
-        if (distance < attackRange)
-            animator.SetBool("isAttacking", true);
-
+      
 
         if (distance > 10)
             animator.SetBool("isChasing", false);
@@ -37,4 +38,5 @@ public class ChaseBehaviour : StateMachineBehaviour
         agent.SetDestination(agent.transform.position);
         agent.speed = 2;
     }
+    
 }

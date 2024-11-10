@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
 
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
     public LayerMask enemyLayers;
     void Update()
     {

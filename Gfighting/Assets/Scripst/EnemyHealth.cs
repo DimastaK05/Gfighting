@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         if (currentHealth > 0)
         {
             // Запускаем анимацию получения урона
-            animator.SetTrigger("hurt"); // Предполагается, что в Animator есть триггер "Hit"
+            animator.SetTrigger("Hurt"); // Предполагается, что в Animator есть триггер "Hit"
         }
         else
         {
