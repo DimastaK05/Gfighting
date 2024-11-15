@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripst\DamageScriptsEnemy.cs" />
     <Compile Include="Assets\Scripst\PatrolBehaviour.cs" />
     <Compile Include="Assets\Scripst\AIController.cs" />
+    <Compile Include="Assets\Scenes\Mainmenu\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripst\CameraController.cs" />
     <Compile Include="Assets\Scripst\PlayerController.cs" />
     <Compile Include="Assets\Scripst\idleBehaviour.cs" />

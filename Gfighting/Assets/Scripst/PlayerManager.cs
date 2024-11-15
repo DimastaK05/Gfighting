@@ -29,7 +29,7 @@ public class PlayerManager : MonoBehaviour
         }
         if (gameOver)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Level1");
         }
         playerHealthText.text = "" + playerHealth;
     }
