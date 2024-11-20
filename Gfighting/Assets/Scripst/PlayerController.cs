@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");// Получает значение горизонтальной оси управления 
         float v = Input.GetAxis("Vertical");//Получает значение вертикальной оси управления
 
-        Vector3 directionVector = new Vector3(-v, 0, h); //Создается вектор, который определяет направление движения персонажа.
+        Vector3 directionVector = new Vector3(-h, 0, -v); //Создается вектор, который определяет направление движения персонажа.
 
         if (directionVector.magnitude > Mathf.Abs(0.05f))
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(directionVector), Time.deltaTime * rotationSpeed); //отвечает за плавный поворот персонажа в сторону движения.
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(groundCheckerTransform.position, Vector3.down, 0.2f, notPlayerMask))
         {
             animator.SetBool("IsCrouch", false);
-            speed = 5f;
+            speed = 3f;
             collider.height = 2f;
             collider.center = new Vector3(collider.center.x, 1.02f, collider.center.z);
 
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
     void UnCrouch()
     {
         animator.SetBool("IsCrouch", true);
-        speed = 7f;
+        speed = 5f;
         collider.height = 3.87f;
         collider.center = new Vector3(0.01230764f, 1.855963f, 0);
     }
