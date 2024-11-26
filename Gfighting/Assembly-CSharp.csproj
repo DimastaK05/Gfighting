@@ -60,6 +60,7 @@
     <Analyzer Include="D:\unity\2022.3.50f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\scene_died\ScriptsScene.cs" />
     <Compile Include="Assets\Scripst\DamageDealer.cs" />
     <Compile Include="Assets\Scripst\ChaseBehaviour.cs" />
     <Compile Include="Assets\Scripst\PlayerAttack.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripst\DamageScriptsEnemy.cs" />
     <Compile Include="Assets\Scripst\PatrolBehaviour.cs" />
     <Compile Include="Assets\Scripst\AIController.cs" />
+    <Compile Include="Assets\Scenes\Level1\Level1manager.cs" />
     <Compile Include="Assets\Scenes\Mainmenu\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripst\CameraController.cs" />
     <Compile Include="Assets\Scripst\PlayerController.cs" />

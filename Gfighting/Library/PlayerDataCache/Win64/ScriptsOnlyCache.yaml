@@ -8,11 +8,17 @@ ScriptsOnlyBuild:
     - DamageDealer
     - Enemy
     - IdleBehaviour
+    - LevelManager
     - PatrolBehaviour
     - PlayerAttack
     - PlayerController
     - PlayerManager
     - SceneManagerScript
+    - ScriptsScene
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
+    Unity.AI.Navigation.dll:
+    - Unity.AI.Navigation.NavMeshSurface
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -45,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -74,6 +81,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
@@ -84,6 +92,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SceneManagerScript
     methodName: GameExit
+  - assembly: Assembly-CSharp
+    fullTypeName: ScriptsScene
+    methodName: ToMainMenuScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ScriptsScene
+    methodName: ToSceneLevel1
   sceneClasses:
     Assets/Scenes/Level1/Level1.unity:
     - Class: 1
@@ -106,6 +120,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -125,39 +141,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1536}
-    - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1560}
     - Class: 114
       Script: {instanceID: 2248}
     - Class: 114
-      Script: {instanceID: 2620}
-    - Class: 114
       Script: {instanceID: 2824}
     - Class: 114
-      Script: {instanceID: 3566}
+      Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 3956}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 3980}
+      Script: {instanceID: 3572}
     - Class: 114
-      Script: {instanceID: 4596}
+      Script: {instanceID: 3962}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 3986}
     - Class: 114
-      Script: {instanceID: 5628}
+      Script: {instanceID: 4602}
     - Class: 114
-      Script: {instanceID: 5778}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 6098}
+      Script: {instanceID: 5110}
     - Class: 114
-      Script: {instanceID: 6680}
+      Script: {instanceID: 5242}
     - Class: 114
-      Script: {instanceID: 6828}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6892}
+      Script: {instanceID: 6686}
     - Class: 114
-      Script: {instanceID: 7890}
+      Script: {instanceID: 6834}
+    - Class: 114
+      Script: {instanceID: 6898}
+    - Class: 114
+      Script: {instanceID: 7896}
+    - Class: 114
+      Script: {instanceID: 24476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,7 +222,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1560}
+    - Class: 114
+      Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 1846}
     - Class: 114
       Script: {instanceID: 2198}
     - Class: 114
@@ -212,19 +234,66 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2824}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 4104}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4356}
+      Script: {instanceID: 4362}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5628}
+      Script: {instanceID: 6104}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/scene_died/scene_died.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 6098}
+      Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 27878}
+      Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2620}
+    - Class: 114
+      Script: {instanceID: 2824}
+    - Class: 114
+      Script: {instanceID: 3118}
+    - Class: 114
+      Script: {instanceID: 3336}
+    - Class: 114
+      Script: {instanceID: 5328}
+    - Class: 114
+      Script: {instanceID: 6104}
+    - Class: 114
+      Script: {instanceID: 36072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,16 +313,10 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 7bfeec4958f766c4f3c7aad30e7eba62
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: c988601bf2753b82232a46c5adc2d00c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ChaseBehaviour
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -302,6 +365,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a8ce5170be76ec544d7085d3a985a435
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneManagerScript
   - hash:
       serializedVersion: 2
       Hash: f854af586011dd194574f89546642e29
@@ -424,6 +493,12 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
+      Hash: c988601bf2753b82232a46c5adc2d00c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ChaseBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: 28fd3d045acc780719a17f02073eb448
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -458,6 +533,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7bfeec4958f766c4f3c7aad30e7eba62
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
@@ -512,6 +593,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: VariablesAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1ec90dd9fd069705ba0011a129f8d6c9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ScriptsScene
   - hash:
       serializedVersion: 2
       Hash: 7bdff9e91edfd9600f92a185def7e34a
@@ -808,6 +895,12 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
+      Hash: af2c3e574db6c3d3b577877c246d7f0b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelManager
+  - hash:
+      serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -848,12 +941,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 540882762544409cc4530e60db00e951
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: ef38c1407dba8c1f5d69f5db61a694fe
@@ -1154,14 +1241,10 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: IdleBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: a8ce5170be76ec544d7085d3a985a435
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SceneManagerScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/Mainmenu/MainMenuScene.unity
   - Assets/Scenes/Level1/Level1.unity
-  playerPath: C:/Users/mrraz/Desktop/project/Gfighting/Gfighting/Build/Gfighting.exe
+  - Assets/Scenes/scene_died/scene_died.unity
+  playerPath: "C:/Users/karpu/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
+    \u0441\u0442\u043E\u043B/Gfighting/Gfighting/Build/Gfighting.exe"

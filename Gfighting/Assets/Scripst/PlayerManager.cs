@@ -21,6 +21,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Damage(int amount)
     {
+
         playerHealthText.text = "" + playerHealth;
         playerHealth -= amount;
         if (playerHealth <= 0)
@@ -29,7 +30,7 @@ public class PlayerManager : MonoBehaviour
         }
         if (gameOver)
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("scene_died");
         }
         playerHealthText.text = "" + playerHealth;
     }

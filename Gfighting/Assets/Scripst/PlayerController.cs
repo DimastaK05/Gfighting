@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     //переменная для управления анимациями персонажа.
@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsInAir", true);
         }
+
     }
     void Jump()
     {
