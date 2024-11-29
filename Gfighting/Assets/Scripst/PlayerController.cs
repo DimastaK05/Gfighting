@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     //Переменная для скорости
-    public float speed = 5f;
+    public static float speed = 5f;
     //Переменная для управления физическим движением персонажа. 
     private Rigidbody rigidbody;
 
     //Переменная для поворота
-    public float rotationSpeed = 10f;
+    public static float rotationSpeed = 5f;
 
     public Transform groundCheckerTransform;
 

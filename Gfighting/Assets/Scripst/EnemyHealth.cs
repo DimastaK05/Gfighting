@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
         if (currentHealth > 0)
         {
             // Запускаем анимацию получения урона
-            animator.SetTrigger("Hurt"); // Предполагается, что в Animator есть триггер "Hit"
+            animator.SetTrigger("Hurt");
+            animator.SetTrigger("back");
         }
         else
         {
@@ -35,7 +36,6 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Die");
 
         StartCoroutine(WaitAndDestroy());
-
 
     }
     private IEnumerator WaitAndDestroy()

@@ -15,8 +15,6 @@ ScriptsOnlyBuild:
     - PlayerManager
     - SceneManagerScript
     - ScriptsScene
-    Unity.AI.Navigation.Editor.dll:
-    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
     Unity.Rider.Editor.dll:
@@ -35,10 +33,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -175,7 +171,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7896}
     - Class: 114
-      Script: {instanceID: 24476}
+      Script: {instanceID: 24478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,7 +289,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6104}
     - Class: 114
-      Script: {instanceID: 36072}
+      Script: {instanceID: 28970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1247,4 +1243,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level1/Level1.unity
   - Assets/Scenes/scene_died/scene_died.unity
   playerPath: "C:/Users/karpu/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/Gfighting/Gfighting/Build/Gfighting.exe"
+    \u0441\u0442\u043E\u043B/Build/Gfighting.exe"

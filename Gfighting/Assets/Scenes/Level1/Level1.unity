@@ -5545,7 +5545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110f876ab3452db49a1fde65e7fe5f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
   playerHealthText: {fileID: 1014373483}
 --- !u!114 &960914924
 MonoBehaviour:
@@ -5579,8 +5578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785dab21eeb242342b837ce8862d0f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  rotationSpeed: 5
   groundCheckerTransform: {fileID: 1756217064}
   notPlayerMask:
     serializedVersion: 2
@@ -10880,7 +10877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee07118d0eda9a49a0e23bb0e11463e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 3
 --- !u!114 &1681178126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10897,7 +10894,7 @@ MonoBehaviour:
   player: {fileID: 960914929}
   damageDealer: {fileID: 1681178125}
   attackRange: 1
-  attackCooldown: 0.9
+  attackCooldown: 0.85
 --- !u!95 &1681178127
 Animator:
   serializedVersion: 5

@@ -9,7 +9,7 @@ public class DamageDealer : MonoBehaviour
         PlayerManager playerHealth = target.GetComponent<PlayerManager>(); // Получаем компонент Health
         
         
-      if (playerHealth != null)
+      if (playerHealth != null && PlayerManager.playerHealth >= 0)
         {
             playerHealth.Damage(damage); // Вызываем метод TakeDamage
         }

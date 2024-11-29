@@ -14,7 +14,7 @@ public class AIController : MonoBehaviour
        
         // Проверка расстояния до игрока
         float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= attackRange && Time.time - lastAttackTime >= attackCooldown)
+        if (distance <= attackRange && Time.time - lastAttackTime >= attackCooldown && PlayerManager.playerHealth>=0)
         {
             animator.SetBool("isAttacking", true);
             // Нанести урон игроку
