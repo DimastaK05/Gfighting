@@ -19,7 +19,7 @@ public class AttackBehaviour : StateMachineBehaviour
         if (distance > 3)
             animator.SetBool("isAttacking", false);
 
-        if (distance > 10)
+        if (distance > 5)
             animator.SetBool("isChasing", false);
     }
 

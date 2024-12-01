@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class ScriptsScene : MonoBehaviour
+public class ScriptSceneDied : MonoBehaviour
 {
   
     public void ToSceneLevel1()
