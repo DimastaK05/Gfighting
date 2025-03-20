@@ -24,6 +24,8 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        var pos = player.position; 
+        pos.y = agent.transform.position.y;
         agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
       
