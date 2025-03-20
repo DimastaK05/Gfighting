@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
       
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 
                 Attack();
