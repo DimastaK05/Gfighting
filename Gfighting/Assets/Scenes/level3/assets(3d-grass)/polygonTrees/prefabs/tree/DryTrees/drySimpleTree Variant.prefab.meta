@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d4dad4529d274c4a98741fd2681d3f3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/tree/DryTrees/drySimpleTree
+    Variant.prefab
+  uploadId: 616684

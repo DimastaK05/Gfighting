@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0f523ea64638c3644acc8ab67736d494
+labels:
+- Grass
+- Ground
+- Leafs
+- Nature
+- Pattern
+- Plants
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 13001
+  packageName: Ground Textures Pack
+  packageVersion: 1.0
+  assetPath: Assets/Ground textures pack/Grass 06/Grass pattern 06.mat
+  uploadId: 29429

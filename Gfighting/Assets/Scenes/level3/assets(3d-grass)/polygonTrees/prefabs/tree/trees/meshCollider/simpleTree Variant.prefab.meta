@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c015b99333a10e44f98a8011c6957922
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/tree/trees/meshCollider/simpleTree
+    Variant.prefab
+  uploadId: 616684

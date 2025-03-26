@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c35fa9b74fa1a8445aee8ae981895022
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/trees/tree1L/naturalMaterial/leavesMaterialN.mat
+  uploadId: 616684

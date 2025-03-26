@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4892c4b990b9614ab8ff83d39a2b0cc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/shrub/littleLeavesShrubL/editableMaterial/shrubMaterial.mat
+  uploadId: 616684

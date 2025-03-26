@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be5136fb7f0c25949a587323e512755c
+timeCreated: 1428607859
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34359
+  packageName: Modular Fences pack
+  packageVersion: 1.1
+  assetPath: Assets/Fence pack/Prefabs/fence_a_turn.prefab
+  uploadId: 60021

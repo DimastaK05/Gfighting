@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 51338363d10788a43809c0738de23ab6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/grass/grass/editableMatreial/grassMaterial.mat
+  uploadId: 616684

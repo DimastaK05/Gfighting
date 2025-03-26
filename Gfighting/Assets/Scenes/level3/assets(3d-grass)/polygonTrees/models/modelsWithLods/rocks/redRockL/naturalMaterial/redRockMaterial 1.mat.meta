@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c5b683bab85565a4889d882adcbe3ac6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/rocks/redRockL/naturalMaterial/redRockMaterial
+    1.mat
+  uploadId: 616684

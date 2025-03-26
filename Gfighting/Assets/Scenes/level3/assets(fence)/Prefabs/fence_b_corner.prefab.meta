@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d81e6cfca025834196365771860954b
+timeCreated: 1428607994
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34359
+  packageName: Modular Fences pack
+  packageVersion: 1.1
+  assetPath: Assets/Fence pack/Prefabs/fence_b_corner.prefab
+  uploadId: 60021

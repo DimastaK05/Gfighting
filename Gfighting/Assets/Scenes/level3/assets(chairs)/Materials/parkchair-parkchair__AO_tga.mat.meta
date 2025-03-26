@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d3ebf079c4e4f694f8ae18aad20cc5a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 850
+  packageName: ParkChair
+  packageVersion: 2.0
+  assetPath: Assets/parkchair/Materials/parkchair-parkchair__AO_tga.mat
+  uploadId: 25855

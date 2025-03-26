@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ac14b04216fcd14db3063ae3e385840
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/prefabLODs/dryTree/dryFallenBranchesTreeL.prefab
+  uploadId: 616684

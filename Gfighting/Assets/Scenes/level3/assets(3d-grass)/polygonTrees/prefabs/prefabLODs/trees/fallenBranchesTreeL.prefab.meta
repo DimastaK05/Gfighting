@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 33be71d7bc9c22f4f8f19633ab7ab943
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/prefabLODs/trees/fallenBranchesTreeL.prefab
+  uploadId: 616684

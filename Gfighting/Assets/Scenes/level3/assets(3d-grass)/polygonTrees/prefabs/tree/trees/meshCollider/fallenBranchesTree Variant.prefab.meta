@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e915b21ca0a91ea4e9f6cb68f929ac9b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/tree/trees/meshCollider/fallenBranchesTree
+    Variant.prefab
+  uploadId: 616684

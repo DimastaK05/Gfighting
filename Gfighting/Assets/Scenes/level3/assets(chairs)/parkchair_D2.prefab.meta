@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5978773460c60d545b9e12479a9f0feb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 850
+  packageName: ParkChair
+  packageVersion: 2.0
+  assetPath: Assets/parkchair/parkchair_D2.prefab
+  uploadId: 25855

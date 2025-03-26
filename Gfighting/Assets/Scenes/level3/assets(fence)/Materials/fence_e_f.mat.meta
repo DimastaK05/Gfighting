@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b76db27ee05e5d24d99b058df05d7935
+timeCreated: 1428609844
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34359
+  packageName: Modular Fences pack
+  packageVersion: 1.1
+  assetPath: Assets/Fence pack/Materials/fence_e_f.mat
+  uploadId: 60021

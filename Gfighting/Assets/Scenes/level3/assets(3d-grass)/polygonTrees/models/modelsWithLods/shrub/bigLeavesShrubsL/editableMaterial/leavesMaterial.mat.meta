@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 02f51847cf433ff4fa21da1ded81111a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/shrub/bigLeavesShrubsL/editableMaterial/leavesMaterial.mat
+  uploadId: 616684

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3a6db7a3eca1c824aaf5bf9e24659a64
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/tree/DryTrees/meshCollider/dryPurpleTree
+    Variant.prefab
+  uploadId: 616684

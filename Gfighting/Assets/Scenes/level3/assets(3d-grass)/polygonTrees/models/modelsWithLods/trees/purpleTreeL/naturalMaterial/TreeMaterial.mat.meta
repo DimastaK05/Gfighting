@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fdddb847847d08f4d98c2343317c310c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/trees/purpleTreeL/naturalMaterial/TreeMaterial.mat
+  uploadId: 616684

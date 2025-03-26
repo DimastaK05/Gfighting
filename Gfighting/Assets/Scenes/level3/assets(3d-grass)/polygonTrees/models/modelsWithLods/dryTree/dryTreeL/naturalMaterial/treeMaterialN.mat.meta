@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0482c615f95216e48bdd33349f4a4989
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/modelsWithLods/dryTree/dryTreeL/naturalMaterial/treeMaterialN.mat
+  uploadId: 616684

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 45f92073d69e48b4a9149fb898cf3660
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/prefabs/prefabLODs/dryBranchL/deadTreeL.prefab
+  uploadId: 616684

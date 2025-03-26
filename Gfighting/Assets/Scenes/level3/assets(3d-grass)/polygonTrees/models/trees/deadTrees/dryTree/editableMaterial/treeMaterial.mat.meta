@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cee867b6b467d9b4d93881ddc8c6f9f3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224068
+  packageName: Polygon Trees
+  packageVersion: 2.5
+  assetPath: Assets/polygonTrees/polygonTrees/models/trees/deadTrees/dryTree/editableMaterial/treeMaterial.mat
+  uploadId: 616684

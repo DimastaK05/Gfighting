@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a37e358f33f85e1449902a0c8f161525
+timeCreated: 1428605403
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34359
+  packageName: Modular Fences pack
+  packageVersion: 1.1
+  assetPath: Assets/Fence pack/Prefabs/fence_g_straight3.prefab
+  uploadId: 60021

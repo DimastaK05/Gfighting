@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43e549d5cb5fe98408447b49cf38d35f
+timeCreated: 1428607388
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34359
+  packageName: Modular Fences pack
+  packageVersion: 1.1
+  assetPath: Assets/Fence pack/Prefabs/Fence_g_gate.prefab
+  uploadId: 60021
