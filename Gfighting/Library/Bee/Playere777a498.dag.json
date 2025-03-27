@@ -258,18 +258,6 @@
       "DebugActionIndex": 8
     },
     {
-      "Annotation": "CopyFiles C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level2.resS",
-      "DisplayName": "Copying level2.resS",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Library/PlayerDataCache/Win64/Data/level2.resS"
-      ],
-      "Outputs": [
-        "C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level2.resS"
-      ],
-      "DebugActionIndex": 9
-    },
-    {
       "Annotation": "CopyFiles C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level3",
       "DisplayName": "Copying level3",
       "ActionType": "CopyFiles",
@@ -278,6 +266,18 @@
       ],
       "Outputs": [
         "C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level3"
+      ],
+      "DebugActionIndex": 9
+    },
+    {
+      "Annotation": "CopyFiles C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level3.resS",
+      "DisplayName": "Copying level3.resS",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Win64/Data/level3.resS"
+      ],
+      "Outputs": [
+        "C:/Users/karpu/OneDrive/Рабочий стол/Build/Gfighting_Data/level3.resS"
       ],
       "DebugActionIndex": 10
     },
@@ -465,8 +465,8 @@
         "Library/PlayerDataCache/Win64/Data/level1",
         "Library/PlayerDataCache/Win64/Data/level1.resS",
         "Library/PlayerDataCache/Win64/Data/level2",
-        "Library/PlayerDataCache/Win64/Data/level2.resS",
         "Library/PlayerDataCache/Win64/Data/level3",
+        "Library/PlayerDataCache/Win64/Data/level3.resS",
         "Library/PlayerDataCache/Win64/Data/resources.assets",
         "Library/PlayerDataCache/Win64/Data/resources.assets.resS",
         "Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra",

@@ -14,6 +14,11 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    
+    public void ToHowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 
     public void GameExit()
     {
