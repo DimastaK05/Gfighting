@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class SceneManagerScript : MonoBehaviour
 {
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "Level1")
+        {
+            SceneManager.LoadScene("MainMenu");               
+        }
+    }
+
     public void GameStart()
     {
         SceneManager.LoadScene("Level1");

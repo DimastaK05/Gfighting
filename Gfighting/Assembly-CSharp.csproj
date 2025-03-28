@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripst\DamageScriptsEnemy.cs" />
     <Compile Include="Assets\Scripst\PatrolBehaviour.cs" />
     <Compile Include="Assets\Scripst\AIController.cs" />
+    <Compile Include="Assets\Scenes\Scene Transition\Scene Transition.cs" />
     <Compile Include="Assets\Scenes\level2\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\Scenes\Mainmenu\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripst\CameraController.cs" />

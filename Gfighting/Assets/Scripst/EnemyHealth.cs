@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage; // ”меньшаем текущее здоровье на полученный урон
 
         // ѕровер€ем, если здоровье меньше или равно нулю
-        if (currentHealth > 0)
+        if (currentHealth >= 0)
         {
             // «апускаем анимацию получени€ урона
             animator.SetTrigger("Hurt");

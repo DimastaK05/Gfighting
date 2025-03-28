@@ -22,8 +22,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -36,7 +38,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -65,7 +66,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
-    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
@@ -79,6 +79,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SceneManagerScript
     methodName: ToHowToPlay
+  - assembly: Assembly-CSharp
+    fullTypeName: ScriptWinScene
+    methodName: ToNextLevel
   - assembly: Assembly-CSharp
     fullTypeName: ScriptWinScene
     methodName: ToMainMenuScene
@@ -133,6 +136,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 2618}
+    - Class: 114
       Script: {instanceID: 3066}
     - Class: 114
       Script: {instanceID: 3574}
@@ -141,7 +146,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4604}
     - Class: 114
-      Script: {instanceID: 26988}
+      Script: {instanceID: 6110}
+    - Class: 114
+      Script: {instanceID: 27010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -194,9 +201,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 6108}
+      Script: {instanceID: 6110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -213,7 +220,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/scene_died/scene_died.unity:
+    Assets/Scenes/level2/Level2.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -222,9 +229,66 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 3066}
+    - Class: 114
+      Script: {instanceID: 3574}
+    - Class: 114
+      Script: {instanceID: 3964}
+    - Class: 114
+      Script: {instanceID: 4604}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/scene_died/scene_died.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -241,16 +305,12 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3334}
     - Class: 114
-      Script: {instanceID: 5328}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 6110}
     - Class: 114
-      Script: {instanceID: 6108}
-    - Class: 114
-      Script: {instanceID: 27706}
+      Script: {instanceID: 1780992}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -296,14 +356,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3512}
     - Class: 114
-      Script: {instanceID: 5328}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 5638}
-    - Class: 114
-      Script: {instanceID: 6108}
+      Script: {instanceID: 6110}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -944,6 +1000,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 29dc5be4f15cd9c7c9e30804cdcef7d5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ExitButton
+  - hash:
+      serializedVersion: 2
       Hash: 1ce63d97d1ca25cba2d91d5f32fd5f79
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
@@ -1260,11 +1322,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: IdleBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 52215356b48b4deb0c9fa6636c31581f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneTransition
   platform: 19
   scenePathNames:
   - Assets/Scenes/Mainmenu/MainMenuScene.unity
   - Assets/Scenes/scene_win/WinScene.unity
   - Assets/Scenes/scene_died/scene_died.unity
   - Assets/Scenes/Level1/Level1.unity
+  - Assets/Scenes/level2/Level2.unity
   playerPath: "C:/Users/karpu/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
     \u0441\u0442\u043E\u043B/Build/Gfighting.exe"

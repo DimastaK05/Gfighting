@@ -8,7 +8,7 @@ public class ScriptWinScene : MonoBehaviour
 
     public void ToNextLevel()
     {
-        SceneManager.LoadScene("level2");
+        SceneManager.LoadScene("Level2");
         PlayerController.speed = 5f;
         PlayerController.rotationSpeed = 5f;
     }

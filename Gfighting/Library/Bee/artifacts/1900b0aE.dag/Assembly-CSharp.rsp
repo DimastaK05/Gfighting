@@ -359,6 +359,7 @@
 "Assets/Scenes/HowToPlay/Scripts/ExitButton.cs"
 "Assets/Scenes/level2/Starfield Skybox/Demo/Script/LookCamera.cs"
 "Assets/Scenes/Mainmenu/Scripts/SceneManager.cs"
+"Assets/Scenes/Scene Transition/Scene Transition.cs"
 "Assets/Scenes/scene_died/ScriptSceneDied.cs"
 "Assets/Scenes/scene_win/ScriptWinScene.cs"
 "Assets/Scripst/AIController.cs"

@@ -7,7 +7,7 @@ public class ChaseBehaviour : StateMachineBehaviour
 {
     NavMeshAgent agent;
     Transform player;
-    float attackRange = 2;
+    float attackRange = 1;
     public DamageDealer damageDealer;
     private float lastAttackTime;
     public float attackCooldown = 1f;
@@ -24,14 +24,17 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var pos = player.position; 
+        var pos = player.position;
         pos.y = agent.transform.position.y;
         agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
-      
+
 
         if (distance > 5)
             animator.SetBool("isChasing", false);
+
+        if (distance < attackRange)
+            animator.SetBool("isAttacking", true);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -40,5 +43,5 @@ public class ChaseBehaviour : StateMachineBehaviour
         agent.SetDestination(agent.transform.position);
         agent.speed = 2;
     }
-    
+
 }
