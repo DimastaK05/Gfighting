@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,7 +8,9 @@ public class Enemy : MonoBehaviour
     int currentHealth;
     private CountEnemy enemyCount;
 
-    // Start is called before the first frame update
+    // Флаг получения урона
+    public bool IsTakingDamage { get; private set; }
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -18,35 +19,43 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Уменьшаем текущее здоровье на полученный урон
+        currentHealth -= damage;
 
-        // Проверяем, если здоровье меньше или равно нулю
         if (currentHealth >= 0)
         {
-            // Запускаем анимацию получения урона
-            animator.SetTrigger("Hurt");
-            animator.SetTrigger("back");
+            // Запускаем процесс получения урона
+            StartCoroutine(HandleDamage());
         }
         else
         {
-            Die(); // Вызываем метод смерти
+            Die();
         }
+    }
+
+    // Корутина для обработки урона
+    private IEnumerator HandleDamage()
+    {
+        IsTakingDamage = true;
+        animator.SetTrigger("Hurt");
+        animator.SetTrigger("back");
+
+        // Ждем длительность анимации
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        IsTakingDamage = false;
     }
 
     void Die()
     {
+        IsTakingDamage = true; // Блокируем атаку при смерти
         animator.SetTrigger("Die");
-       
         StartCoroutine(WaitAndDestroy());
-
     }
+
     private IEnumerator WaitAndDestroy()
     {
-        
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
         Destroy(gameObject);
         enemyCount.EnemyDefeated();
     }
-
 }
