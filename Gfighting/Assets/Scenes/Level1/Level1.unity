@@ -1495,6 +1495,7 @@ MonoBehaviour:
   animator: {fileID: 56893317}
   player: {fileID: 247384908}
   damageDealer: {fileID: 56893311}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!114 &56893313
@@ -8616,6 +8617,7 @@ MonoBehaviour:
   animator: {fileID: 471580921}
   player: {fileID: 247384908}
   damageDealer: {fileID: 471580916}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!54 &471580918
@@ -9263,6 +9265,7 @@ MonoBehaviour:
   animator: {fileID: 523278289}
   player: {fileID: 247384908}
   damageDealer: {fileID: 523278284}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!54 &523278286
@@ -9594,6 +9597,7 @@ MonoBehaviour:
   animator: {fileID: 533362420}
   player: {fileID: 247384908}
   damageDealer: {fileID: 533362415}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!54 &533362417
@@ -22960,6 +22964,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalEnemies: 0
+--- !u!114 &1269617078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269617057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110f876ab3452db49a1fde65e7fe5f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthText: {fileID: 1074062630}
+--- !u!95 &1269617082 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2142792918987694117, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
+  m_PrefabInstance: {fileID: 785777742179019626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1269617083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269617057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05ccbd5d432f994e943b081b4692fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1269617082}
+  attackPoint: {fileID: 1291466225}
+  attackRange: 0.5
+  attackDamge: 20
+  attackRate: 2
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1272239321
 GameObject:
   m_ObjectHideFlags: 0
@@ -23254,6 +23296,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289490096}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1291466225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4395396881524654809, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
+  m_PrefabInstance: {fileID: 785777742179019626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1303703092
 GameObject:
   m_ObjectHideFlags: 0
@@ -26406,6 +26453,7 @@ MonoBehaviour:
   animator: {fileID: 1455831762}
   player: {fileID: 247384908}
   damageDealer: {fileID: 1455831756}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!114 &1455831758
@@ -34692,6 +34740,7 @@ MonoBehaviour:
   animator: {fileID: 1950251222}
   player: {fileID: 247384908}
   damageDealer: {fileID: 1950251230}
+  damageDealer2: {fileID: 0}
   attackRange: 2
   attackCooldown: 1
 --- !u!114 &1950251230
@@ -37643,6 +37692,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4618237692884705509, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1269617072}
+    - targetCorrespondingSourceObject: {fileID: 4618237692884705509, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1269617078}
+    - targetCorrespondingSourceObject: {fileID: 4618237692884705509, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1269617083}
   m_SourcePrefab: {fileID: 100100000, guid: 3792be7fe317f7c41a7806f1d97d5111, type: 3}
 --- !u!1001 &3509961555361012341
 PrefabInstance:

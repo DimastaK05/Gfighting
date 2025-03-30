@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     private CountEnemy enemyCount;
+ 
 
     // Флаг получения урона
     public bool IsTakingDamage { get; private set; }

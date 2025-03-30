@@ -6,6 +6,7 @@ public class AIController : MonoBehaviour
     public Animator animator;
     public Transform player;
     public DamageDealer damageDealer;
+    public DamageDealer2 damageDealer2;
     public float attackRange = 2f;
     public float attackCooldown = 1f;
     private float lastAttackTime;
@@ -13,12 +14,13 @@ public class AIController : MonoBehaviour
 
     // Ссылка на скрипт Enemy
     private Enemy enemy;
+   
 
     void Start()
     {
         // Получаем компонент Enemy
         enemy = GetComponent<Enemy>();
-
+     
         agent = GetComponent<NavMeshAgent>();
         // Настройки для плавного поворота
         agent.angularSpeed = 120f; // Уменьшите, если вращение слишком резкое
@@ -29,7 +31,10 @@ public class AIController : MonoBehaviour
     void Update()
     {
         // Если враг получает урон - атака блокируется
-        if (enemy.IsTakingDamage) return;
+        
+         if (enemy.IsTakingDamage) return;
+        
+       
 
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance <= attackRange
@@ -37,7 +42,8 @@ public class AIController : MonoBehaviour
             && PlayerManager.playerHealth >= 0)
         {
             animator.SetBool("isAttacking", true);
-            damageDealer.DealDamage(player.gameObject);
+             damageDealer.DealDamage(player.gameObject);
+            
             lastAttackTime = Time.time;
         }
 
