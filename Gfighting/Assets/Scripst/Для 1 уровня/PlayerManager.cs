@@ -1,10 +1,7 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using System.Collections;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -12,41 +9,46 @@ public class PlayerManager : MonoBehaviour
     public static int playerHealth = 100;
     public static bool gameOver;
     public TextMeshProUGUI playerHealthText;
+    public static bool isTakingDamage { get; private set; }
 
-    // Start is called before the first frame update
     void Start()
     {
-
         animator = GetComponent<Animator>();
         playerHealth = 100;
         gameOver = false;
+        isTakingDamage = false;
     }
 
     public void Damage(int amount)
     {
-
-        if (playerHealth >= 0) playerHealthText.text = "" + playerHealth;
-        if (playerHealth > 0) animator.SetTrigger("Hurt");
-         playerHealth -= amount;
+        if (playerHealth <= 0) return;
+        
+        StartCoroutine(HandleDamage());
+        if ( !PlayerController.isBlock) playerHealth -= amount;
+        
+        if (playerHealth >= 0) playerHealthText.text = playerHealth.ToString();
+        if (playerHealth > 0 && !PlayerAttack.isAttacking && !PlayerAttack.isCrossAttacking && !PlayerController.isBlock) animator.SetTrigger("Hurt");
 
         if (playerHealth <= 0)
         {
             gameOver = true;
-        }
-        if (gameOver)
-        {
             animator.SetTrigger("Die");
             PlayerController.speed = 0f;
             PlayerController.rotationSpeed = 0f;
             StartCoroutine(WaitAndEndGame());
         }
-        if (playerHealth >= 0) playerHealthText.text = "" + playerHealth;
     }
+
+    private IEnumerator HandleDamage()
+    {
+        isTakingDamage = true;
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        isTakingDamage = false;
+    }
+
     private IEnumerator WaitAndEndGame()
     {
-        
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
         SceneManager.LoadScene("scene_died");
     }
 }

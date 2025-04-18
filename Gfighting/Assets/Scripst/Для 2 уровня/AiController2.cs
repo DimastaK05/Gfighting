@@ -5,6 +5,7 @@ public class AIController2 : MonoBehaviour
 {
     public Animator animator;
     public Transform player;
+    public DamageDealer damageDealer;
     public DamageDealer2 damageDealer2;
     public float attackRange = 2f;
     public float attackCooldown = 1f;

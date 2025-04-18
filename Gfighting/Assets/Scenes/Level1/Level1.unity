@@ -1496,7 +1496,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 56893311}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!114 &56893313
 MonoBehaviour:
@@ -8618,7 +8618,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 471580916}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!54 &471580918
 Rigidbody:
@@ -9266,7 +9266,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 523278284}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!54 &523278286
 Rigidbody:
@@ -9598,7 +9598,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 533362415}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!54 &533362417
 Rigidbody:
@@ -22998,10 +22998,15 @@ MonoBehaviour:
   attackPoint: {fileID: 1291466225}
   attackRange: 0.5
   attackDamge: 20
-  attackRate: 2
+  attackCrossDamage: 30
+  attackCrossRate: 2
+  attackRate: 1
+  attackAnimationDuration: 0.3
+  crossAttackAnimationDuration: 0.8
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+  speedRecoveryTime: 0.5
 --- !u!1 &1272239321
 GameObject:
   m_ObjectHideFlags: 0
@@ -26454,7 +26459,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 1455831756}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!114 &1455831758
 MonoBehaviour:
@@ -34741,7 +34746,7 @@ MonoBehaviour:
   player: {fileID: 247384908}
   damageDealer: {fileID: 1950251230}
   damageDealer2: {fileID: 0}
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 1
 --- !u!114 &1950251230
 MonoBehaviour:

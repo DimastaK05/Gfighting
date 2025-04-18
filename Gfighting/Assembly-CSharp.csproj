@@ -60,32 +60,32 @@
     <Analyzer Include="D:\unity\2022.3.50f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripst\DamageDealer2.cs" />
-    <Compile Include="Assets\Scripst\DamageDealer.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\AiController2.cs" />
     <Compile Include="Assets\Scenes\scene_died_2\ScriptSceneDied2.cs" />
     <Compile Include="Assets\Scripst\ChaseBehaviour.cs" />
-    <Compile Include="Assets\Scripst\PlayerManager2.cs" />
-    <Compile Include="Assets\Scripst\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripst\EnemyHealth2.cs" />
-    <Compile Include="Assets\Scripst\PlayerAttack2.cs" />
-    <Compile Include="Assets\Scripst\PlayerManager.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\PlayerManager2.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\CountEnemy.cs" />
     <Compile Include="Assets\Scripst\AttackBehaviour.cs" />
-    <Compile Include="Assets\Scripst\CountEnemy.cs" />
-    <Compile Include="Assets\Scripst\EnemyHealth.cs" />
     <Compile Include="Assets\Scripst\PatrolBehaviour.cs" />
-    <Compile Include="Assets\Scripst\CountEnemy2.cs" />
-    <Compile Include="Assets\Scripst\AIController.cs" />
     <Compile Include="Assets\Scenes\Scene Transition\Scene Transition.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\PlayerManager.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\EnemyHealth.cs" />
     <Compile Include="Assets\Scenes\scene_win_2\ScriptWinScene2.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\DamageDealer.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\PlayerAttack2.cs" />
     <Compile Include="Assets\Scenes\scene_win_1\ScriptWinScene.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\EnemyHealth2.cs" />
     <Compile Include="Assets\Scenes\level2\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\CountEnemy2.cs" />
     <Compile Include="Assets\Scenes\scene_died_1\ScriptSceneDied.cs" />
-    <Compile Include="Assets\Scripst\AiController2.cs" />
     <Compile Include="Assets\Scenes\Mainmenu\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripst\CameraController.cs" />
     <Compile Include="Assets\Scripst\PlayerController.cs" />
     <Compile Include="Assets\Scripst\idleBehaviour.cs" />
     <Compile Include="Assets\Scenes\HowToPlay\Scripts\ExitButton.cs" />
+    <Compile Include="Assets\Scripst\Для 1 уровня\AIController.cs" />
+    <Compile Include="Assets\Scripst\Для 2 уровня\DamageDealer2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scenes\scene_win_1\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask notPlayerMask;
     private CapsuleCollider collider;
     public float jumpForce = 2f;
+    public static bool isBlock { get; private set; }
+    [SerializeField] private float speedRecoveryTime = 0.5f; // Время восстановления скорости
+    private Coroutine speedRecoveryCoroutine;
+
 
     void Start()
     {
@@ -51,7 +56,25 @@ public class PlayerController : MonoBehaviour
             UnCrouch();
         }
 
-      if (Input.GetKeyDown(KeyCode.Escape))
+
+        if (Input.GetKeyDown(KeyCode.Q) && !PlayerAttack.isAttacking && !PlayerAttack.isCrossAttacking)
+        {
+            animator.SetBool("Block", true);
+            isBlock = true;
+            speed = 0f;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            animator.SetBool("Block", false);
+            isBlock = false;
+            if (speedRecoveryCoroutine != null)
+            {
+                StopCoroutine(speedRecoveryCoroutine);
+            }
+            speedRecoveryCoroutine = StartCoroutine(RecoverSpeed());
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenuScene");
         }
@@ -93,4 +116,22 @@ public class PlayerController : MonoBehaviour
         collider.height = 3.87f;
         collider.center = new Vector3(0.01230764f, 1.855963f, 0);
     }
+    IEnumerator RecoverSpeed()
+    {
+        float startTime = Time.time;
+        float startSpeed = 0f;
+        float targetSpeed = 5f; // Или возьми переменную [SerializeField]
+
+        while (Time.time < startTime + speedRecoveryTime)
+        {
+            float t = (Time.time - startTime) / speedRecoveryTime;
+            PlayerController.speed = Mathf.Lerp(startSpeed, targetSpeed, t);
+            yield return null;
+        }
+
+        PlayerController.speed = targetSpeed;
+    }
+
 }
+
+

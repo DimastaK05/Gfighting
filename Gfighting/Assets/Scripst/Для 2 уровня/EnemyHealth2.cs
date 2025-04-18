@@ -18,7 +18,7 @@ public class Enemy2 : MonoBehaviour
         enemyCount = FindObjectOfType<CountEnemy2>();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage2(int damage)
     {
         currentHealth -= damage;
 
