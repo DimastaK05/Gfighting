@@ -29,22 +29,24 @@ public class ChaseBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
+        Enemy enemy = animator.GetComponent<Enemy>();
+        if (enemy.IsTakingDamage) return;
+
         agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
 
-        // Основные изменения здесь:
-        if (distance > 2)
+       
+        if (distance > 10) 
         {
             animator.SetBool("isChasing", false);
-         
         }
 
-    
         if (distance < attackRange)
         {
             animator.SetBool("isAttacking", true);
         }
-       
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

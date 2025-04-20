@@ -15,16 +15,28 @@ public class PatrolBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timer = 0;
-        Transform pointsObject = GameObject.FindGameObjectWithTag("Points").transform;
-        foreach (Transform t in pointsObject)
-            points.Add(t);
+        // Обновляем путь только при достижении точки
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            random = Random.Range(0, points.Count);
+            agent.SetDestination(points[random].position);
+        }
 
-        random = Random.Range(0, points.Count);
-        agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(points[random].position);
+        // Проверка дистанции ДО таймера
+        float distance = Vector3.Distance(animator.transform.position, player.position);
+        if (distance < chaseRange)
+        {
+            animator.SetBool("isChasing", true);
+            return; // Отменяем патрулирование при обнаружении
+        }
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        // Таймер для выхода из патруля
+        timer += Time.deltaTime;
+        if (timer > 5)
+        {
+            animator.SetBool("isPatrolling", false);
+            timer = 0f;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

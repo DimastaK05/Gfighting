@@ -33,8 +33,7 @@ public class AIController : MonoBehaviour
         // ≈сли враг получает урон - атака блокируетс€
         
          if (enemy.IsTakingDamage) return;
-        
-       
+
 
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance <= attackRange

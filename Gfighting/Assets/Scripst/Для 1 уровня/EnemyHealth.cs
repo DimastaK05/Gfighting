@@ -22,6 +22,14 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
+        if (currentHealth <= 0) return;
+
+        currentHealth -= damage;
+        animator.ResetTrigger("Hurt"); // Сброс триггеров
+        animator.ResetTrigger("back");
+
+        StartCoroutine(HandleDamage());
+
         if (currentHealth >= 0)
         {
             // Запускаем процесс получения урона
