@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speedRecoveryTime = 0.5f; // Время восстановления скорости
     private Coroutine speedRecoveryCoroutine;
 
-
+   
     void Start()
     {
         collider = GetComponent<CapsuleCollider>();

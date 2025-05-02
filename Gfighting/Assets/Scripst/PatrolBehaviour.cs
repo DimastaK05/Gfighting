@@ -1,71 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PatrolBehaviour : StateMachineBehaviour
 {
-    float timer;
-    int random;
-    List<Transform> points = new List<Transform>();
-    NavMeshAgent agent;
+    private float timer;
+    private NavMeshAgent agent;
+    private Transform player;
+    private Transform[] points;
 
-    Transform player;
-    float chaseRange = 3;
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    [SerializeField] private float chaseRange = 3;
+    [SerializeField] private float patrolTime = 5;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // Обновляем путь только при достижении точки
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            random = Random.Range(0, points.Count);
-            agent.SetDestination(points[random].position);
-        }
+        // Инициализация компонентов
+        agent = animator.GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // Проверка дистанции ДО таймера
-        float distance = Vector3.Distance(animator.transform.position, player.position);
-        if (distance < chaseRange)
-        {
-            animator.SetBool("isChasing", true);
-            return; // Отменяем патрулирование при обнаружении
-        }
+        // Получение точек патруля (должны быть назначены в инспекторе)
+        var parent = GameObject.Find("Points");
+        points = parent.GetComponentsInChildren<Transform>();
 
-        // Таймер для выхода из патруля
-        timer += Time.deltaTime;
-        if (timer > 5)
-        {
-            animator.SetBool("isPatrolling", false);
-            timer = 0f;
-        }
+        // Начальная точка патруля
+        agent.SetDestination(points[Random.Range(1, points.Length)].position);
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
-            agent.SetDestination(points[Random.Range(0, points.Count)].position);
-
-        timer += Time.deltaTime;
-        if (timer > 5)
-        {
-            animator.SetBool("isPatrolling", false);
-            timer = 0f;
-        }
-
-
+        // Проверка дистанции до игрока
         float distance = Vector3.Distance(animator.transform.position, player.position);
         if (distance < chaseRange)
         {
             animator.SetBool("isChasing", true);
-            timer = 0f;
+            return;
         }
 
+        // Обновление пути при достижении точки
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            agent.SetDestination(points[Random.Range(1, points.Length)].position);
+        }
 
+        // Таймер для смены состояния
+        timer += Time.deltaTime;
+        if (timer > patrolTime)
+        {
+            animator.SetBool("isPatrolling", false);
+            timer = 0;
+        }
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(agent.transform.position);
+        agent.ResetPath();
     }
 }

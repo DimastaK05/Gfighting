@@ -7,7 +7,8 @@ public class Enemy2 : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     private CountEnemy2 enemyCount;
-
+    [SerializeField] private GameObject healthKitPrefab;
+    [SerializeField][Range(0, 1)] private float dropChance = 0.5f; // 30% шанс
 
     // Флаг получения урона
     public bool IsTakingDamage { get; private set; }
@@ -50,6 +51,10 @@ public class Enemy2 : MonoBehaviour
     {
         IsTakingDamage = true; // Блокируем атаку при смерти
         animator.SetTrigger("Die");
+        if (healthKitPrefab != null && Random.value <= dropChance)
+        {
+            Instantiate(healthKitPrefab, transform.position, Quaternion.identity);
+        }
         StartCoroutine(WaitAndDestroy());
     }
 

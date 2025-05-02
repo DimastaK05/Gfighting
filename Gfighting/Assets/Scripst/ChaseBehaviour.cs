@@ -31,8 +31,15 @@ public class ChaseBehaviour : StateMachineBehaviour
     {
         
         Enemy enemy = animator.GetComponent<Enemy>();
-        if (enemy.IsTakingDamage) return;
-
+        if (enemy != null)
+        {
+            if (enemy.IsTakingDamage) return;
+        }
+        Enemy2 enemy2 = animator.GetComponent<Enemy2>();
+        if (enemy2 != null)
+        {
+            if (enemy2.IsTakingDamage) return;
+        }
         agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
 

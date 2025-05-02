@@ -21,7 +21,7 @@ public class PlayerAttack2 : MonoBehaviour
     [SerializeField] private float speedRecoveryTime = 0.5f; // Время восстановления скорости
     private Coroutine speedRecoveryCoroutine;
 
-
+    public AudioSource moveSound;
     void Update()
     {
         if (Time.time >= nextAttackTime)
@@ -43,7 +43,9 @@ public class PlayerAttack2 : MonoBehaviour
     {
         isAttacking = true;
         animator.SetTrigger("Attack");
+        moveSound.Play();
         PlayerController.speed = 0f;
+      
         // Ждем завершения анимации
         yield return new WaitForSeconds(attackAnimationDuration);
 
@@ -65,6 +67,7 @@ public class PlayerAttack2 : MonoBehaviour
     {
         isCrossAttacking = true;
         animator.SetTrigger("Cross_Attack");
+        moveSound.Play();
         PlayerController.speed = 0f;
         // Ждем завершения анимации
         yield return new WaitForSeconds(crossAttackAnimationDuration);

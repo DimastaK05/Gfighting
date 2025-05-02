@@ -2,21 +2,23 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
-
+using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
+    public AudioSource moveSound;
     Animator animator;
-    public static int playerHealth = 100;
+    public static float playerHealth = 100f;
     public static bool gameOver;
     public TextMeshProUGUI playerHealthText;
     public static bool isTakingDamage { get; private set; }
-
+    public Image Bar;
     void Start()
     {
         animator = GetComponent<Animator>();
         playerHealth = 100;
         gameOver = false;
         isTakingDamage = false;
+        Bar.fillAmount = (float)playerHealth / 100f;
     }
 
     public void Damage(int amount)
@@ -25,9 +27,19 @@ public class PlayerManager : MonoBehaviour
         
         StartCoroutine(HandleDamage());
         if ( !PlayerController.isBlock) playerHealth -= amount;
+
+        if (playerHealth >= 0)
+        {
         
-        if (playerHealth >= 0) playerHealthText.text = playerHealth.ToString();
-        if (playerHealth > 0 && !PlayerAttack.isAttacking && !PlayerAttack.isCrossAttacking && !PlayerController.isBlock) animator.SetTrigger("Hurt");
+            Bar.fillAmount = (float)playerHealth / 100f;
+   
+        }
+        if (playerHealth > 0 && !PlayerAttack.isAttacking && !PlayerAttack.isCrossAttacking && !PlayerController.isBlock)
+        {
+            moveSound.Play();
+            animator.SetTrigger("Hurt");
+           
+        }
 
         if (playerHealth <= 0)
         {
@@ -37,11 +49,13 @@ public class PlayerManager : MonoBehaviour
             PlayerController.rotationSpeed = 0f;
             StartCoroutine(WaitAndEndGame());
         }
+        
     }
 
     private IEnumerator HandleDamage()
     {
         isTakingDamage = true;
+      
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         isTakingDamage = false;
     }
