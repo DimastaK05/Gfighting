@@ -40,7 +40,7 @@ public class ChaseBehaviour : StateMachineBehaviour
         {
             if (enemy2.IsTakingDamage) return;
         }
-        agent.SetDestination(player.position);
+        if (agent.enabled = true) agent.SetDestination(player.position);
         float distance = Vector3.Distance(animator.transform.position, player.position);
 
        
@@ -59,8 +59,11 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(agent.transform.position);
-        agent.speed = 2;
+        if (agent.enabled = true)
+        {
+            agent.SetDestination(agent.transform.position);
+            agent.speed = 2;
+        }
     }
 
 }

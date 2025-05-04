@@ -1,15 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class CountEnemy2 : MonoBehaviour
+
+public class CountEnemy2: MonoBehaviour
 {
-    public int totalEnemies; // Общее количество врагов
-    private int enemiesDefeated = 0; // Количество уничтоженных врагов
+    public int totalEnemies;
+    private int enemiesDefeated = 0;
+    [SerializeField] private float delay = 5f; // Время задержки в секундах
 
     void Start()
     {
-        totalEnemies = FindObjectsOfType<Enemy2>().Length; // Подсчет всех врагов на старте
+        totalEnemies = FindObjectsOfType<Enemy2>().Length;
     }
 
     public void EnemyDefeated()
@@ -28,8 +29,14 @@ public class CountEnemy2 : MonoBehaviour
 
     private void EndLevel()
     {
-
-        SceneManager.LoadScene("WinScene2");
+        // Запускаем корутину с задержкой
+        StartCoroutine(LoadSceneAfterDelay());
     }
 
+    // Новая корутина для задержки
+    private IEnumerator LoadSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(delay); // Ждем указанное время
+        SceneManager.LoadScene("WinScene2"); // Загружаем сцену после задержки
+    }
 }

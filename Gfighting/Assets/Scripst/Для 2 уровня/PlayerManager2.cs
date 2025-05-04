@@ -7,7 +7,7 @@ public class PlayerManager2 : MonoBehaviour
 {
     public AudioSource moveSound;
     Animator animator;
-    public static int playerHealth = 100;
+    public static float playerHealth = 100f;
     public static bool gameOver;
     public TextMeshProUGUI playerHealthText;
     public static bool isTakingDamage { get; private set; }

@@ -1,15 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private float verticalOffset = 20f;
     public Animator animator;
     public int maxHealth = 100;
     int currentHealth;
     private CountEnemy enemyCount;
     [SerializeField] private GameObject healthKitPrefab;
     [SerializeField][Range(0, 1)] private float dropChance = 0.5f; // 30% шанс
-
+    private NavMeshAgent navAgent;
     // Флаг получения урона
     public bool IsTakingDamage { get; private set; }
 
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         enemyCount = FindObjectOfType<CountEnemy>();
+        navAgent = GetComponent<NavMeshAgent>();
     }
 
     public void TakeDamage(int damage)
@@ -57,9 +60,17 @@ public class Enemy : MonoBehaviour
     {
         IsTakingDamage = true; // Блокируем атаку при смерти
         animator.SetTrigger("Die");
+
+        navAgent.enabled = false;
         if (healthKitPrefab != null && Random.value <= dropChance)
         {
-            Instantiate(healthKitPrefab, transform.position, Quaternion.identity);
+            Vector3 spawnPosition = new Vector3(
+        transform.position.x,
+        transform.position.y + 1,
+        transform.position.z
+    );
+
+            Instantiate(healthKitPrefab, spawnPosition, Quaternion.identity);
         }
 
 
@@ -68,7 +79,7 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator WaitAndDestroy()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
         enemyCount.EnemyDefeated();
     }

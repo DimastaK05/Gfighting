@@ -39,7 +39,7 @@ public class AIController2 : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance <= attackRange
             && Time.time - lastAttackTime >= attackCooldown
-            && PlayerManager.playerHealth >= 0)
+            && PlayerManager2.playerHealth >= 0)
         {
             animator.SetBool("isAttacking", true);
             damageDealer2.DealDamage2(player.gameObject);

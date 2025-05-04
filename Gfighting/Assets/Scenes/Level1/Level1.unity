@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 56893317}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!54 &56893314
 Rigidbody:
@@ -1912,7 +1912,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &56893315
 CapsuleCollider:
@@ -12520,7 +12520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 471580921}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!114 &471580916
 MonoBehaviour:
@@ -12578,7 +12578,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &471580919
 CapsuleCollider:
@@ -14092,7 +14092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 523278289}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!114 &523278284
 MonoBehaviour:
@@ -14150,7 +14150,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &523278287
 CapsuleCollider:
@@ -14426,7 +14426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 533362420}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!114 &533362415
 MonoBehaviour:
@@ -14484,7 +14484,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &533362418
 CapsuleCollider:
@@ -33728,6 +33728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalEnemies: 0
+  delay: 5
 --- !u!114 &1269617078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39082,7 +39083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1455831762}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!54 &1455831759
 Rigidbody:
@@ -39109,7 +39110,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &1455831760
 CapsuleCollider:
@@ -50219,7 +50220,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!136 &1950251226
 CapsuleCollider:
@@ -50258,7 +50259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1950251222}
   maxHealth: 100
-  healthKitPrefab: {fileID: 7156675733545607672, guid: 2b313a5a794e47b458c77f8bd621ac7b, type: 3}
+  healthKitPrefab: {fileID: 4179747522167223117, guid: e65ddad5451dd8f46893503213073f06, type: 3}
   dropChance: 0.3
 --- !u!114 &1950251229
 MonoBehaviour:

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy2 : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Enemy2 : MonoBehaviour
     private CountEnemy2 enemyCount;
     [SerializeField] private GameObject healthKitPrefab;
     [SerializeField][Range(0, 1)] private float dropChance = 0.5f; // 30% шанс
-
+    private NavMeshAgent navAgent;
     // Флаг получения урона
     public bool IsTakingDamage { get; private set; }
 
@@ -17,6 +18,7 @@ public class Enemy2 : MonoBehaviour
     {
         currentHealth = maxHealth;
         enemyCount = FindObjectOfType<CountEnemy2>();
+        navAgent = GetComponent<NavMeshAgent>();
     }
 
     public void TakeDamage2(int damage)
@@ -51,16 +53,24 @@ public class Enemy2 : MonoBehaviour
     {
         IsTakingDamage = true; // Блокируем атаку при смерти
         animator.SetTrigger("Die");
+
+        navAgent.enabled = false;
         if (healthKitPrefab != null && Random.value <= dropChance)
         {
-            Instantiate(healthKitPrefab, transform.position, Quaternion.identity);
+            Vector3 spawnPosition = new Vector3(
+      transform.position.x,
+      transform.position.y + 1,
+      transform.position.z
+  );
+
+            Instantiate(healthKitPrefab, spawnPosition, Quaternion.identity);
         }
         StartCoroutine(WaitAndDestroy());
     }
 
     private IEnumerator WaitAndDestroy()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
         enemyCount.EnemyDefeated();
     }
